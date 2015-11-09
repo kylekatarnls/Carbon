@@ -1494,6 +1494,28 @@ class Carbon extends DateTime
     ///////////////////////////////////////////////////////////////////
 
     /**
+     * Consider the timezone when modify, addMonths, addHours, etc.
+     *
+     * @param string $modify
+     *
+     * @return static
+     */
+    public function modify($modify)
+    {
+        $tz = $this->tzName;
+
+        if ($tz !== static::now()->tzName) {
+            $this->setTimezone('UTC');
+            $result = parent::modify($modify);
+            $this->setTimezone($tz);
+        } else {
+            $result = parent::modify($modify);
+        }
+
+        return $result;
+    }
+
+    /**
      * Add years to the instance. Positive $value travel forward while
      * negative $value travel into the past.
      *

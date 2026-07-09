@@ -349,7 +349,6 @@ trait Localization
             }
 
             foreach ($fromTranslations as $index => $word) {
-                // Ignore trailing dot (being abbreviation marker)
                 if (preg_match("/^$word\$/iu", $chunk)) {
                     return $toTranslations[$index] ?? '';
                 }

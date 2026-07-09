@@ -4,6 +4,14 @@
 
 ## Version 3.x
 
+#### 3.13.1 (9 July 2026)
+## What's Changed
+* Implement `CarbonPeriod::quarterly()` by @kylekatarnls in https://github.com/CarbonPHP/carbon/pull/130
+* Fix translation spacing by @kylekatarnls in https://github.com/CarbonPHP/carbon/pull/135
+
+
+**Full Changelog**: https://github.com/CarbonPHP/carbon/compare/3.13.0...3.13.1
+
 #### 3.13.0 (18 June 2026)
 ## What's Changed
 * Add year interval/period with overflow modes by @kylekatarnls in https://github.com/CarbonPHP/carbon/pull/127

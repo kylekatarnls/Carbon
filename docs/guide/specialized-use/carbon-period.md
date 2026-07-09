@@ -235,6 +235,21 @@ foreach ($period as $date) {
 echo implode(', ', $dates);
 ```
 
+### Quarterly periods
+
+```php{no-render}
+CarbonPeriod::quarterly(
+    DateTimeInterface|string|int|null $start = null,
+    DateTimeInterface|string|int|null $end = null,
+    ?int $recurrences = null,
+    ?int $anchorDay = null,
+    OverflowMode $mode = OverflowMode::AnchorDay,
+    ?int $options = null,
+)
+```
+It works just like `CarbonPeriod::monthly()` (see [monthly periods above](#monthly-periods))
+but with a 3-month interval.
+
 ### Yearly periods
 
 Because of February 29th on leap years, yearly intervals can also overflow,

@@ -1,5 +1,10 @@
 [
     {
+        "tag_name": "3.13.1",
+        "created_at": "2026-07-09T18:23:49Z",
+        "body": "## What's Changed\r\n* Implement `CarbonPeriod::quarterly()` by @kylekatarnls in https:\/\/github.com\/CarbonPHP\/carbon\/pull\/130\r\n* Fix translation spacing by @kylekatarnls in https:\/\/github.com\/CarbonPHP\/carbon\/pull\/135\r\n\r\n\r\n**Full Changelog**: https:\/\/github.com\/CarbonPHP\/carbon\/compare\/3.13.0...3.13.1"
+    },
+    {
         "tag_name": "3.13.0",
         "created_at": "2026-06-18T13:49:15Z",
         "body": "## What's Changed\r\n* Add year interval\/period with overflow modes by @kylekatarnls in https:\/\/github.com\/CarbonPHP\/carbon\/pull\/127\r\n* Allow to load custom locales even when mute-operator is bypassed by @kylekatarnls in https:\/\/github.com\/CarbonPHP\/carbon\/pull\/128\r\n* Implement `overflow` and `anchorDay` parameters for `month()`, `setMonth()`, `year()` and `setYear()` by @kylekatarnls in https:\/\/github.com\/CarbonPHP\/carbon\/pull\/129\r\n\r\n\r\n**Full Changelog**: https:\/\/github.com\/CarbonPHP\/carbon\/compare\/3.12.3...3.13.0"

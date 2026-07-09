@@ -921,6 +921,26 @@ class LocalizationTest extends AbstractTestCase
     #[TestWith(['февраля', 'February'])]
     public function testTranslateMonthsEitherStandaloneOrNot(string $ru, string $en)
     {
-        $this->assertSame($en, \Carbon\Carbon::translateTimeString($ru, 'ru', 'en'));
+        $this->assertSame($en, Carbon::translateTimeString($ru, 'ru', 'en'));
+    }
+
+    public function testTranslateKeepSpacing(): void
+    {
+        $this->assertSame(
+            "Wed17Jun'26 20:00",
+            Carbon::translateTimeString("mié17Jun'26 20:00", 'es', 'en'),
+        );
+        $this->assertSame(
+            "Wed 17 Jun '26 20:00",
+            Carbon::translateTimeString("mié 17 Jun '26 20:00", 'es', 'en'),
+        );
+        $this->assertSame(
+            "Wed17Jun'26 20:00",
+            Carbon::translateTimeString("mié.17Jun'26 20:00", 'es', 'en'),
+        );
+        $this->assertSame(
+            "Wed 17 Jun '26 20:00",
+            Carbon::translateTimeString("mié. 17 Jun '26 20:00", 'es', 'en'),
+        );
     }
 }
